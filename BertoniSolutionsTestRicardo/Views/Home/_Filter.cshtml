@@ -1,0 +1,22 @@
+﻿@using BertoniSolutionsTestRicardo.Models
+
+@model AlbumsVM
+<div class="row value clear floatL">
+    <div class="rpw input-group">
+      
+            <span class="input-group-addon">Album</span><span class="inputtext">
+                @Html.DropDownListFor(
+                  x => x.Filter.SelectedValue,
+                  new SelectList(Model.Filter.Items, "id", "title"), new { @class = "form-control", @id="ddlAlbums"}
+              )
+            </span>
+   
+        <div class="col-md-6">
+            <input class="form-control" type="button" id="btnLoadAlbum" name="btnLoadAlbum" value="Visualizar Album" />
+        </div>
+    </div>
+
+
+</div>
+<br />
+<br />

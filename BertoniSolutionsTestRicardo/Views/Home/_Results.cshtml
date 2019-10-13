@@ -1,0 +1,41 @@
+﻿@using BertoniSolutionsTestRicardo.Models
+
+@model AlbumsVM
+
+<div class="row">
+    <table style="padding:10px">
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>Album</th>
+                <th></th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        @foreach (var item in Model.Results.Items)
+        {
+            <tr>
+                <td>
+                    @Html.HiddenFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.HiddenFor(modelItem => item.AlbumId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    <img src="@item.ThumbnailUrl" alt="Thumb" height="50px" width="50px" />
+                   
+                </td>
+                <td>
+                    <button type="button"  class="btnViewComments btn btn-primary" onclick="LoadModal(this);"  data-id="@item.AlbumId">
+                        Ver Comentarios
+                    </button>
+                   
+                </td>
+            </tr>
+        }
+    </table>
+</div>

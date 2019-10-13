@@ -1,0 +1,57 @@
+﻿@using BertoniSolutionsTestRicardo.Models
+@{
+    /**/
+
+    ViewBag.Title = "Home Page";
+}
+
+@model AlbumsVM
+
+<div class="jumbotron">
+    <h1>Photo Albums</h1>
+    <p class="lead">Bertoni Solutions - Test Ricardo I. Valle</p>
+</div>
+
+
+@*@using (Html.BeginForm())
+    {*@
+<div class="row" id="Filter">
+    @Html.Action("LoadFilterData")
+</div>
+<div class="row" id="Results">
+    <div class="col-md-12">
+        @Html.Action("LoadResults")
+    </div>
+</div>
+<div class="row" id="Detail">
+    <div class="col-md-12">
+        @Html.Action("LoadDetail")
+    </div>
+</div>
+@*}*@
+
+
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnLoadAlbum").click(function (e) {
+            var selectedValue = $("#ddlAlbums").val();
+            alert(selectedValue);
+            $("#Results").load("/Home/LoadResults/" + selectedValue);
+        });
+    });
+    function LoadModal(button) {
+        $("#Detail").load("/Home/LoadDetail/" + $(button).data('id'));
+ 
+    }
+
+</script>
+
+
+
