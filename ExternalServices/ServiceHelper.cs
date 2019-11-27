@@ -71,10 +71,10 @@ namespace ExternalServices
         /// <param name="JsonParams"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static HttpResponseMessage Get(String URL, int timeOut = DEFAULT_TIMEOUT)
+        public static HttpResponseMessage Get(String URL, int timeOut = DEFAULT_TIMEOUT, string myParam = null)
         {
-            var response = new HttpResponseMessage();
-            response.StatusCode = HttpStatusCode.NotFound;
+            var newResponse = new HttpResponseMessage();
+            newResponse.StatusCode = HttpStatusCode.NotFound;
 
             try
             {
@@ -90,7 +90,7 @@ namespace ExternalServices
 
                     //TODO: Log Request Info Here
 
-                    response = client.GetAsync(new Uri(URL)).Result;
+                    newResponse = client.GetAsync(new Uri(URL)).Result;
                 }
             }
             catch (HttpRequestException rex)
@@ -100,12 +100,12 @@ namespace ExternalServices
             catch (TaskCanceledException tce)
             {
                 //TODO: Log Error Here
-                response.StatusCode = HttpStatusCode.RequestTimeout;
+                newResponse.StatusCode = HttpStatusCode.RequestTimeout;
             }
             catch (TimeoutException tex)
             {
                 //TODO: Log Error Here
-                response.StatusCode = HttpStatusCode.RequestTimeout;
+                newResponse.StatusCode = HttpStatusCode.RequestTimeout;
             }
             catch (Exception ex)
             {
@@ -115,7 +115,8 @@ namespace ExternalServices
             {
                 var json = wc.DownloadString(URL);
             }
-            return response;
+            return newResponse;
         }
     }
+
 }

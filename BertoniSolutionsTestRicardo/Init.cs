@@ -1,4 +1,3 @@
-
 public class init
 {
     private double _myValue;
@@ -6,6 +5,10 @@ public class init
     {
         //Constructor with a value
         _myValue = initialValue;
-        
+
+    }
+    public init()
+    {
+        //Blank constructor
     }
 }
