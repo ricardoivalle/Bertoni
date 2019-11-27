@@ -118,11 +118,11 @@ namespace ExternalServices
             return newResponse;
         }
         /// <summary>
-        /// Local Blank method from the repo
+        /// Local Blank method from branch 1
         /// </summary>
         /// <param name="localParam"></param>
         /// <returns></returns>
-        public int BlankMethodLocal(String localParam)
+        public int MethodBranch1(String localParam)
         {
             return 0;
         }
