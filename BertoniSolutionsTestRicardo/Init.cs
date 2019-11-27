@@ -11,6 +11,5 @@ public class init
     {
         //Blank constructor
         _myValue = 1 + 3;
-        //TODO: Add some logic here.
     }
 }
