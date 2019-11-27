@@ -10,6 +10,7 @@ public class init
     public init()
     {
         //Blank constructor
-        _myValue = 0;
+        _myValue = 1 + 3;
+        //TODO: Add some logic here.
     }
 }
