@@ -118,4 +118,12 @@ namespace ExternalServices
             return response;
         }
     }
+        /// <summary>
+        /// Blank method from the repo
+        /// </summary>
+        /// <param name="repoParam"></param>
+        /// <returns></returns>
+        public void BlankMethodRepo (String repoParam)
+        {
+        }
 }
