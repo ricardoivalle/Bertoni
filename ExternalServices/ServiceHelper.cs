@@ -117,5 +117,14 @@ namespace ExternalServices
             }
             return newResponse;
         }
+        /// <summary>
+        /// Local Blank method from the repo
+        /// </summary>
+        /// <param name="localParam"></param>
+        /// <returns></returns>
+        public int BlankMethodLocal(String localParam)
+        {
+            return 0;
+        }
     }
 }
