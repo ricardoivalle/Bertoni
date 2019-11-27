@@ -71,7 +71,7 @@ namespace ExternalServices
         /// <param name="JsonParams"></param>
         /// <param name="timeOut"></param>
         /// <returns></returns>
-        public static HttpResponseMessage Get(String URL, int timeOut = DEFAULT_TIMEOUT)
+        public static HttpResponseMessage Get(String URL, int timeOut = DEFAULT_TIMEOUT, string additionalParam = null)
         {
             var response = new HttpResponseMessage();
             response.StatusCode = HttpStatusCode.NotFound;
