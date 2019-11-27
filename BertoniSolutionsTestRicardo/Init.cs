@@ -10,5 +10,6 @@ public class init
     public init()
     {
         //Blank constructor
+        _myValue = 0;
     }
 }
