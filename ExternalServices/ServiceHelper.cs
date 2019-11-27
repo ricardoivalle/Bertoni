@@ -119,11 +119,12 @@ namespace ExternalServices
         }
     }
         /// <summary>
-        /// Blank method from the repo
+        /// Local Blank method from the repo
         /// </summary>
-        /// <param name="repoParam"></param>
+        /// <param name="localParam"></param>
         /// <returns></returns>
-        public void BlankMethodRepo (String repoParam)
+        public int BlankMethodLocal(String localParam)
         {
+            return 0;
         }
 }
