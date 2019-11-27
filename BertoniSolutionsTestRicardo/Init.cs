@@ -12,4 +12,8 @@ public class init
         //Blank constructor
         _myValue = 0;
     }
+    public void initialize()
+    {
+        throw new System.Exception("I had to crash");
+    }
 }
